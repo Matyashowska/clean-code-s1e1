@@ -16,7 +16,7 @@ body {
   width: 100%;
 }
 
-.logo .more-inf {
+.logo .logo__link {
   font-family: fantasy, cursive;
 }
 
@@ -34,13 +34,15 @@ body {
   margin: 0 auto 0;
 }
 
-.task {
+.list__task,
+.list__title,
+.add-task__input {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
 
-.wrapper {
+.add-task__wrapper {
   display: flex;
 }
 
@@ -122,7 +124,10 @@ li {
   align-items: center;
 }
 
-li > * {
+.list__checkbox,
+.list__title,
+.list__task,
+.list__btn {
   vertical-align: middle;
 }
 
@@ -141,13 +146,13 @@ li > input[type="text"] {
   width: 226px;
 }
 
-button.delete img {
+.list__btn_delete img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.delete img:hover {
+.list__btn_delete img:hover {
   transform: rotateZ(0);
 }
 
@@ -162,11 +167,11 @@ ul li input[type="text"] {
   display: none;
 }
 
-ul li.edit-mode input[type="text"] {
+ul li.list__item_edit-mode input[type="text"] {
   display: inline-block;
   width: 224px;
 }
 
-ul li.edit-mode label {
+ul li.list__item_edit-mode label {
   display: none;
 }
